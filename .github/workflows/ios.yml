@@ -16,22 +16,22 @@ on:
       - '**/tsconfig.*.json'
       - '**/tsconfig.json'
       - '**/tslint.json'
-    pull_request:
-      branches:
-        - '**'
-        - '!*i10n*'
-      paths-ignore:
-        - '**.md'
-        - '**/*.md'
-        - '**/*.spec.ts'
-        - '**/jest.config.js'
-        - '**/package.json'
-        - '**/scripts/**'
-        - '**/test-setup.ts'
-        - '**/test/**'
-        - '**/tsconfig.*.json'
-        - '**/tsconfig.json'
-        - '**/tslint.json'
+  pull_request:
+    branches:
+      - '**'
+      - '!*i10n*'
+    paths-ignore:
+      - '**.md'
+      - '**/*.md'
+      - '**/*.spec.ts'
+      - '**/jest.config.js'
+      - '**/package.json'
+      - '**/scripts/**'
+      - '**/test-setup.ts'
+      - '**/test/**'
+      - '**/tsconfig.*.json'
+      - '**/tsconfig.json'
+      - '**/tslint.json'
 
 jobs:
   build:
