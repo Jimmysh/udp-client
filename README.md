@@ -1,8 +1,8 @@
 # Capacitor UDPClient Plugin
 
 [![npm][npm-udp-client]][npm-udp-client-url]
-[![node build][build-node-udp-client]][build-badge-node]
-[![ios build][build-ios-udp-client]][build-badge-ios]
+[![node build][badge-node]][badge-node-url]
+[![ios build][badge-ios]][badge-ios-url]
 
 ## Installation
 
@@ -28,10 +28,10 @@ await AiaoUDPClient.send({ value: 'aaa' });
 
 <!-- build -->
 
-[build-ios-udp-client]: https://github.com/aiao-io/udp-client/actions?query=workflow:iOS
-[build-node-udp-client]: https://github.com/aiao-io/udp-client/actions?query=workflow:Node
+[badge-ios-url]: https://github.com/aiao-io/udp-client/actions?query=workflow:iOS
+[badge-node-url]: https://github.com/aiao-io/udp-client/actions?query=workflow:Node
 
 <!-- badge -->
 
-[build-badge-node]: https://github.com/aiao-io/udp-client/workflows/Node/badge.svg
-[build-badge-ios]: https://github.com/aiao-io/udp-client/workflows/iOS/badge.svg
+[badge-node]: https://github.com/aiao-io/udp-client/workflows/Node/badge.svg
+[badge-ios]: https://github.com/aiao-io/udp-client/workflows/iOS/badge.svg
