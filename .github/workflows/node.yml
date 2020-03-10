@@ -1,4 +1,4 @@
-name: Node build
+name: Node
 
 on:
   push:
