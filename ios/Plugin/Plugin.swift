@@ -29,9 +29,7 @@ public class AiaoUDPClient: CAPPlugin {
     // test
     @objc func echo(_ call: CAPPluginCall) {
         let value = call.getString("value") ?? ""
-        call.success([
-            "value": value,
-        ])
+        call.success(["value": value])
     }
 
     @objc func send(_ call: CAPPluginCall) {
@@ -42,15 +40,11 @@ public class AiaoUDPClient: CAPPlugin {
                     call.reject("Failed, error: \(error)")
                     self.connectionDidFail(error: error)
                 } else {
-                    call.resolve([
-                        "success": true,
-                    ])
+                    call.resolve(["success": true])
                 }
         })
         } else {
-            notifyListeners("error", data: [
-                "error": "未连接",
-            ])
+            notifyListeners("error", data: ["error": "未连接"])
             call.reject("未连接")
         }
     }
@@ -63,14 +57,10 @@ public class AiaoUDPClient: CAPPlugin {
             connectionDidFail(error: error)
         case .preparing:
             print("Preparing")
-            notifyListeners("stateChange", data: [
-                "state": "Preparing",
-            ])
+            notifyListeners("stateChange", data: ["state": "Preparing"])
         case .ready:
             print("Connected")
-            notifyListeners("stateChange", data: [
-                "state": "Connected",
-            ])
+            notifyListeners("stateChange", data: ["state": "Connected"])
         case let .failed(error):
             connectionDidFail(error: error)
         case .cancelled:
@@ -82,9 +72,7 @@ public class AiaoUDPClient: CAPPlugin {
 
     func connectionDidFail(error: Error) {
         print("Failed, error: \(error)")
-        notifyListeners("error", data: [
-            "error": "\(error)",
-        ])
+        notifyListeners("error", data: ["error": "\(error)"])
         if connection?.stateUpdateHandler != nil {
             connection?.stateUpdateHandler = nil
             connection?.cancel()
