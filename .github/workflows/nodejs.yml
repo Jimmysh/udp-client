@@ -62,6 +62,6 @@ jobs:
           yarn install --frozen-lockfile --non-interactive
 
       - name: Build
-        run: yarun run build
+        run: yarn build
         env:
           CI: true
